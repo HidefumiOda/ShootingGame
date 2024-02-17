@@ -12,7 +12,7 @@ public class MyPlayerHealth : MonoBehaviour
     public Image damageImage;
     public AudioClip deathClip;
     public float flashSpeed = 5;
-    public Color flashColor = new Color(1f, 0f, 0f, 0.1f);
+    public Color color = new Color(1f, 0f, 0f, 0.1f);
     Animator anim;
     AudioSource playerAudio;
     PlayerMovement playerMovement;
@@ -56,11 +56,11 @@ public class MyPlayerHealth : MonoBehaviour
     {
         if (damaged)
         {
-            damageImage.color = flashColor;
+            damageImage.color = color;
         }
         else
         {
-            damageImage.color = flashColor.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
+            damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
         damaged = false;
     }

@@ -868,6 +868,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -899,18 +900,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100074, guid: be66986effd141b4992d2d78be127139, type: 3}
   m_PrefabInstance: {fileID: 541934973}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1413312557
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1413312556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce08e930e454b5a4ebff777cb8ea2256, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!195 &1413312558
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1077,6 +1066,32 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400074, guid: be66986effd141b4992d2d78be127139, type: 3}
   m_PrefabInstance: {fileID: 541934973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1413312565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413312556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b0e24daf23674e4b8aa9503f6ec0f29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0.5
+  attackDamage: 10
+--- !u!114 &1413312567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413312556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce08e930e454b5a4ebff777cb8ea2256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1666141853
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,6 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1666141854}
   - component: {fileID: 1666141855}
+  - component: {fileID: 1666141856}
   m_Layer: 5
   m_Name: HealthSlider
   m_TagString: Untagged
@@ -1167,6 +1183,25 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1666141856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666141853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e691bcca11d3db942bd216651dc92b81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 100
+  currentHealth: 0
+  healthSlider: {fileID: 1666141855}
+  damageImage: {fileID: 2008499515}
+  deathClip: {fileID: 8300000, guid: d36a393bca4582043982db9089e1694f, type: 3}
+  flashSpeed: 5
+  color: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1001 &1768734129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1554,7 +1589,7 @@ MonoBehaviour:
   damageImage: {fileID: 0}
   deathClip: {fileID: 0}
   flashSpeed: 5
-  flashColor: {r: 1, g: 0, b: 0, a: 0.1}
+  color: {r: 1, g: 0, b: 0, a: 0.1}
 --- !u!1 &1990594646
 GameObject:
   m_ObjectHideFlags: 0
@@ -1678,6 +1713,7 @@ GameObject:
   - component: {fileID: 2008499514}
   - component: {fileID: 2008499516}
   - component: {fileID: 2008499515}
+  - component: {fileID: 2008499517}
   m_Layer: 5
   m_Name: DamageImage
   m_TagString: Untagged
@@ -1743,6 +1779,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2008499513}
   m_CullTransparentMesh: 1
+--- !u!114 &2008499517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008499513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce08e930e454b5a4ebff777cb8ea2256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2081770710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1773,6 +1821,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
