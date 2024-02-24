@@ -18,12 +18,14 @@ public class MyPlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
     bool isDead;
     bool damaged;
+    MyPlayerShooting myPlayerShooting;
     void Awake()
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         playerMovement = GetComponent<PlayerMovement>();
         currentHealth = startingHealth;
+        myPlayerShooting = GetComponentInChildren<MyPlayerShooting>();
     }
 
     public void TakeDamage(int amount)
@@ -41,10 +43,12 @@ public class MyPlayerHealth : MonoBehaviour
     void Death()
     {
         isDead = true;
+        myPlayerShooting.DisableEffects();
         anim.SetTrigger("Die");
         playerAudio.clip = deathClip;
         playerAudio.Play();
         playerMovement.enabled = false;
+        myPlayerShooting.enabled = false;
     }
 
     public void RestartLevel()

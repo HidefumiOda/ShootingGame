@@ -6,14 +6,28 @@ public class MyEnemyMovement : MonoBehaviour
 {
     Transform player;
     UnityEngine.AI.NavMeshAgent nav;
+    MyPlayerHealth myPlayerHealth;
+    MyEnemyHealth myEnemyHealth;
+
     void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         nav = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        myPlayerHealth = player.GetComponent<MyPlayerHealth>();
+        myEnemyHealth = GetComponent<MyEnemyHealth>();
     }
 
     void Update()
     {
-        nav.SetDestination(player.position);
+        Debug.Log(myEnemyHealth);
+        Debug.Log(myPlayerHealth);
+        if (myEnemyHealth.currentHealth > 0 && myPlayerHealth.currentHealth > 0)
+        {
+            nav.SetDestination(player.position);
+        }
+        else
+        {
+            nav.enabled = false;
+        }
     }
 }

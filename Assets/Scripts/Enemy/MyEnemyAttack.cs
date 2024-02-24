@@ -11,6 +11,7 @@ public class MyEnemyAttack : MonoBehaviour
     MyPlayerHealth myPlayerHealth;
     bool playerInRange;
     float timer;
+    MyEnemyHealth myEnemyHealth;
 
 
     void Awake()
@@ -40,7 +41,7 @@ public class MyEnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && playerInRange)
+        if(timer >= timeBetweenAttacks && playerInRange && myEnemyHealth.currentHealth > 0)
         {
             Attack();
         }
