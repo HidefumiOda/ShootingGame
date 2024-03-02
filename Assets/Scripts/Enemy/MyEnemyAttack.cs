@@ -41,7 +41,7 @@ public class MyEnemyAttack : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if(timer >= timeBetweenAttacks && playerInRange && myEnemyHealth.currentHealth > 0)
+        if(timer >= timeBetweenAttacks && playerInRange && myPlayerHealth.currentHealth > 0)
         {
             Attack();
         }
