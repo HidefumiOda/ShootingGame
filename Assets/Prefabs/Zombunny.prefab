@@ -278,10 +278,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88b0907073ab8e943b98318b33d3ece2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 100
+  startingHealth: 150
   currentHealth: 0
   sinkSpeed: 2.5
-  scoreValue: 10
+  scoreValue: 7
   deathClip: {fileID: 8300000, guid: 1d3bfb9269f136947bf8ac164cace1ff, type: 3}
 --- !u!1001 &102824018825415584
 PrefabInstance:

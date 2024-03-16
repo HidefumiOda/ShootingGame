@@ -227,8 +227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 100
   currentHealth: 0
-  sinkSpeed: 2.5
-  scoreValue: 10
+  sinkSpeed: 4
+  scoreValue: 15
   deathClip: {fileID: 8300000, guid: 62366b8d2c37a49dca550841c741317f, type: 3}
 --- !u!195 &-7305098062947086630
 NavMeshAgent:
@@ -264,8 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0e24daf23674e4b8aa9503f6ec0f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackDamage: 10
+  timeBetweenAttacks: 0.2
+  attackDamage: 3
 --- !u!114 &8796013646359312428
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -253,8 +253,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 300
   currentHealth: 0
-  sinkSpeed: 2.5
-  scoreValue: 10
+  sinkSpeed: 1.5
+  scoreValue: 25
   deathClip: {fileID: 8300000, guid: 8c615fd0429f34edf85539d70279360d, type: 3}
 --- !u!114 &2807029892121274473
 MonoBehaviour:
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b0e24daf23674e4b8aa9503f6ec0f29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1
   attackDamage: 10
 --- !u!114 &6830010917422888075
 MonoBehaviour:
