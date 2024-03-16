@@ -1030,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombunny
       objectReference: {fileID: 0}
+    - target: {fileID: 102824017632163206, guid: e4c756f5a257200409d081545269679c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4c756f5a257200409d081545269679c, type: 3}
 --- !u!1 &1666141853
@@ -1573,6 +1577,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ZomBear
       objectReference: {fileID: 0}
+    - target: {fileID: 471818917341828480, guid: 9291646e9b99d6b47a2be5e3165f8136, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 471818917342316960, guid: 9291646e9b99d6b47a2be5e3165f8136, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1703,6 +1711,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4708150969360114522, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
+      propertyPath: m_Radius
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: -4708150969360114522, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
+      propertyPath: m_Center.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2659672205744075088, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
       propertyPath: m_Name
       value: Hellephant
@@ -1750,6 +1766,10 @@ PrefabInstance:
     - target: {fileID: 2659672205744237936, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8113660635327486640, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
+      propertyPath: m_Radius
+      value: 1.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a617305e12346cf42b5b6aa21bde7f33, type: 3}
